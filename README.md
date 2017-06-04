@@ -41,7 +41,7 @@ import Chart from '**'
 
 ### How to Write chart
 
-[react-radial-bar-chart](https://github.com/justQing00/react-radial-bar-chart)
+example: [react-radial-bar-chart](https://github.com/justQing00/react-radial-bar-chart)
 
 ```javascript
   class Chart** {
