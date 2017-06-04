@@ -4,9 +4,9 @@ react chart canvas base structure
 ### How to use
 ```javascript
 import ReactChartCanvas from 'react-chart-canvas';
-import Chart from '**'
+import Chart** from '**'
 
-<ReactChartCanvas Chart={Chart}/>
+<ReactChartCanvas Chart={Chart** }/>
 
 ```
 ### RadialBarChart Props
@@ -14,7 +14,7 @@ import Chart from '**'
 {
   onClick: (e, ringInfo), // default
   onHover: (e, ringInfo), // default
-  onHover: ({}), // default
+  onHover: ({ ratio, clientWidth, clientHeight, ratioWidth, ratioHeight }, e), // default
   title: '',
   isGradient: false,
   labelStyle: '#333',
