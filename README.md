@@ -37,3 +37,30 @@ import Chart from '**'
 [react-chart-tooltip](https://github.com/justQing00/react-chart-tooltip)
 
 [react-chart-adapt](https://github.com/justQing00/react-chart-adapt)
+
+
+### How to Write chart
+
+[react-radial-bar-chart](https://github.com/justQing00/react-radial-bar-chart)
+
+```javascript
+  class Chart** {
+
+    constructor(props) {
+      this.setValue(props);
+    }
+
+    setValue = (props = {}) => {
+      ...
+    }
+
+    update = (props, ctx) => {
+      ...
+    }
+
+    draw = (ctx) => {
+      **
+    }
+    ...
+  }
+```
