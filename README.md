@@ -4,7 +4,7 @@ react chart canvas base structure
 ### How to use
 ```javascript
 import ReactChartCanvas from 'react-chart-canvas';
-import Chart** from '**'
+import Chart* from '**'
 
 <ReactChartCanvas Chart={Chart** }/>
 
@@ -12,17 +12,17 @@ import Chart** from '**'
 ### RadialBarChart Props
 ```javascript
 {
-  onClick: (e, ringInfo), // default
-  onHover: (e, ringInfo), // default
-  onHover: ({ ratio, clientWidth, clientHeight, ratioWidth, ratioHeight }, e), // default
+  onClick: (e, info), // default
+  onHover: (e, info), // default
+  onResize: ({ ratio, clientWidth, clientHeight, ratioWidth, ratioHeight }, e), // default
   title: '',
   isGradient: false,
   labelStyle: '#333',
   dataStyle: '#fff',
   tooltip: {  // default
     show: true,
-    formatter: (ringInfo) => {
-      return `占比: ${ringInfo.percent*100}%`;
+    formatter: (info) => {
+      return `占比: ${info.percent*100}%`;
     }
   },
   tooltipStyle: {
@@ -44,7 +44,7 @@ import Chart** from '**'
 example: [react-radial-bar-chart](https://github.com/justQing00/react-radial-bar-chart)
 
 ```javascript
-  class Chart** {
+  class Chart* {
 
     constructor(props) {
       this.setValue(props);
@@ -59,7 +59,7 @@ example: [react-radial-bar-chart](https://github.com/justQing00/react-radial-bar
     }
 
     draw = (ctx) => {
-      **
+      ...
     }
     ...
   }

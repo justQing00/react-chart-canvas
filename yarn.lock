@@ -1563,9 +1563,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-chart-adapt@^0.1.1:
-  version "0.1.1"
-  resolved "http://registry.npm.taobao.org/react-chart-adapt/download/react-chart-adapt-0.1.1.tgz#772c4f5cc1a3a03cf37325287ff0772ab433538e"
+react-chart-adapt@^0.1.2:
+  version "0.1.2"
+  resolved "http://registry.npm.taobao.org/react-chart-adapt/download/react-chart-adapt-0.1.2.tgz#a2eada5709a5996622e20e2f97014abe78d46e70"
   dependencies:
     react "^15.5.4"
     react-dom "^15.5.4"
