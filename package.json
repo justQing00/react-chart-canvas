@@ -5,12 +5,12 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel -d lib/ src/components/ --copy-files"
+    "build": "NODE_ENV=production babel -d lib/ src/ --copy-files"
   },
   "dependencies": {
     "react": "^15.5.4",
-    "react-chart-tooltip": "^0.1.1",
-    "react-chart-adapt": "^0.1.2"
+    "element-resize-event": "^2.0.9",
+    "react-chart-tooltip": "^0.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
