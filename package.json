@@ -1,6 +1,6 @@
 {
   "name": "react-chart-canvas",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "react component about radial bar chart",
   "main": "lib/index.js",
   "scripts": {

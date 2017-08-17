@@ -17,10 +17,8 @@ export default class RadialBarChart extends React.Component {
     this.ctx = this.canvas.getContext('2d');
     this.canvas.addEventListener('mousemove', this.onMove);
     this.canvas.addEventListener('click', this.onClick);
-    elementResizeEvent(this.canvasBox, () => {
-      if (this.timer) clearTimeout(this.timer);
-      this.timer = setTimeout(this.dispatchResize, 100);
-    });
+    elementResizeEvent(this.canvasBox, this.handleResize);
+    window.addEventListener('resize', this.handleResize, false);
     const { Chart } = this.props;
     this.chart = new Chart(this.props);
     this.dispatchResize();
@@ -33,6 +31,7 @@ export default class RadialBarChart extends React.Component {
   componentWillUnmount() {
     this.canvas.removeEventListener('mousemove', this.onMove, false);
     this.canvas.removeEventListener('click', this.onClick, false);
+    window.removeEventListener('resize', this.handleResize, false);
     unbind(this.canvasBox);
     if (this.timer) clearTimeout(this.timer);
     if (this.drewTimer) clearTimeout(this.drewTimer);
@@ -50,6 +49,11 @@ export default class RadialBarChart extends React.Component {
     const info = this.chart.update({ event: 'onMove', eventPosition }, this.ctx);
     if (onHover && info) onHover(e, info);
     this.setState({ info, eventPosition });
+  }
+
+  handleResize = () => {
+    if (this.timer) clearTimeout(this.timer);
+    this.timer = setTimeout(this.dispatchResize, 100); // 延后处理
   }
 
   dispatchResize = () => {
@@ -72,7 +76,7 @@ export default class RadialBarChart extends React.Component {
           });
           const [w, h, rw, rh] = values;
           this.resize({ ratio, clientWidth: w, clientHeight: h, ratioWidth: rw, ratioHeight: rh });
-          this.drewTimer = setTimeout(startDrew, 25);
+          this.drewTimer = setTimeout(startDrew, 25); // 缓慢增大
         }
       };
       startDrew();
